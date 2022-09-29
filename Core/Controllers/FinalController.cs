@@ -12,10 +12,16 @@ namespace Core.Controllers
     {
         public static IndividualizationKiz GetIndividualization(Query query)
         {
+            var inn = query?.UnifySelfSigns?.SenderGln;
+            if (!string.IsNullOrWhiteSpace(inn) && inn.Length > 10)
+            {
+                inn = inn.Substring(0, 10);
+            }
+
             var obj = new IndividualizationKiz()
             {
                 Version = "1",
-                ParticipantInn = query?.UnifySelfSigns?.SenderGln,
+                ParticipantInn = inn,
                 IndividualizationDate = query?.UnifySelfSigns?.UnifyDate?.ToString("yyyy-MM-dd"),
                 ProductsList = new ProductsList()
                 {

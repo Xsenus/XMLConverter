@@ -28,12 +28,13 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
             this.txtPath = new System.Windows.Forms.TextBox();
             this.txtName = new System.Windows.Forms.TextBox();
             this.btnSelect = new System.Windows.Forms.Button();
             this.tableLayoutPanel = new System.Windows.Forms.TableLayoutPanel();
-            this.lblPath = new System.Windows.Forms.Label();
             this.labelName = new System.Windows.Forms.Label();
+            this.lblPath = new System.Windows.Forms.Label();
             this.btnStart = new System.Windows.Forms.Button();
             this.btnCancel = new System.Windows.Forms.Button();
             this.tableLayoutPanel.SuspendLayout();
@@ -43,7 +44,7 @@
             // 
             this.txtPath.Dock = System.Windows.Forms.DockStyle.Fill;
             this.txtPath.Location = new System.Drawing.Point(163, 3);
-            this.txtPath.MinimumSize = new System.Drawing.Size(350, 0);
+            this.txtPath.MinimumSize = new System.Drawing.Size(350, 4);
             this.txtPath.Multiline = true;
             this.txtPath.Name = "txtPath";
             this.txtPath.Size = new System.Drawing.Size(350, 59);
@@ -53,7 +54,7 @@
             // 
             this.txtName.Dock = System.Windows.Forms.DockStyle.Fill;
             this.txtName.Location = new System.Drawing.Point(163, 68);
-            this.txtName.MinimumSize = new System.Drawing.Size(350, 0);
+            this.txtName.MinimumSize = new System.Drawing.Size(350, 4);
             this.txtName.Multiline = true;
             this.txtName.Name = "txtName";
             this.txtName.Size = new System.Drawing.Size(350, 59);
@@ -94,17 +95,6 @@
             this.tableLayoutPanel.Size = new System.Drawing.Size(682, 188);
             this.tableLayoutPanel.TabIndex = 4;
             // 
-            // lblPath
-            // 
-            this.lblPath.AutoSize = true;
-            this.lblPath.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.lblPath.Location = new System.Drawing.Point(3, 0);
-            this.lblPath.Name = "lblPath";
-            this.lblPath.Size = new System.Drawing.Size(154, 65);
-            this.lblPath.TabIndex = 5;
-            this.lblPath.Text = "Путь к файлу:";
-            this.lblPath.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
             // labelName
             // 
             this.labelName.AutoSize = true;
@@ -115,6 +105,17 @@
             this.labelName.TabIndex = 6;
             this.labelName.Text = "Имя выходного файла:";
             this.labelName.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // lblPath
+            // 
+            this.lblPath.AutoSize = true;
+            this.lblPath.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.lblPath.Location = new System.Drawing.Point(3, 0);
+            this.lblPath.Name = "lblPath";
+            this.lblPath.Size = new System.Drawing.Size(154, 65);
+            this.lblPath.TabIndex = 5;
+            this.lblPath.Text = "Путь к файлу:";
+            this.lblPath.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // btnStart
             // 
@@ -148,6 +149,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(682, 188);
             this.Controls.Add(this.tableLayoutPanel);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MinimumSize = new System.Drawing.Size(700, 235);
             this.Name = "MainForm";
             this.Text = "XML Converter";
