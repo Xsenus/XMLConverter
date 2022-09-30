@@ -1,4 +1,5 @@
-﻿using System.Xml.Serialization;
+﻿using System.Collections.Generic;
+using System.Xml.Serialization;
 
 namespace Core.Models.Original
 {
@@ -8,6 +9,6 @@ namespace Core.Models.Original
         [XmlElement(ElementName = "sign_gtin")]
         public string SignGtin { get; set; }
         [XmlElement(ElementName = "union")]
-        public Union Union { get; set; }
+        public List<Union> Union { get; set; }
     }
 }

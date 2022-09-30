@@ -31,13 +31,16 @@ namespace Core.Controllers
 
             foreach (var item in query?.UnifySelfSigns?.Unifies?.ByGtin)
             {
-                var produc = new Product()
+                foreach (var union in item.Union)
                 {
-                    CisCode = item?.Union?.SignNum,
-                    Sgtin = item?.Union?.Gs1Sgtin,
-                    Gtin = $"0{item?.SignGtin}"
-                };
-                obj.ProductsList.Product.Add(produc);
+                    var produc = new Product()
+                    {
+                        CisCode = union?.SignNum,
+                        Sgtin = union?.Gs1Sgtin,
+                        Gtin = $"0{item?.SignGtin}"
+                    };
+                    obj.ProductsList.Product.Add(produc);
+                }                
             }            
 
             return obj;
